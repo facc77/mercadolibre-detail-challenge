@@ -157,7 +157,6 @@ const ProductDetail = () => {
             width: "95%",
             position: "relative",
             bottom: { sx: 0, md: "16rem" },
-            /* marginY: "1.5rem", */
           }}
         >
           <Typography
@@ -187,6 +186,24 @@ const ProductDetail = () => {
           </Typography>
         </Box>
         <RelatedProducts />
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+          backgroundColor: theme ? "#2a2a2a" : "#fff",
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "14px",
+            color: "#3483fa !important",
+            padding: "2rem",
+          }}
+        >
+          Proyecto realizado con fines educativos - Ferrer Gonzalo Facundo
+        </Typography>
       </Box>
     </>
   );
