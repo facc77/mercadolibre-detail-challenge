@@ -1,14 +1,34 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../router/AppRouter";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ThumbUpOffAltOutlinedIcon from "@mui/icons-material/ThumbUpOffAltOutlined";
+import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
 import ThumbDownOutlinedIcon from "@mui/icons-material/ThumbDownOutlined";
+import ThumbDownAltRoundedIcon from "@mui/icons-material/ThumbDownAltRounded";
 import Rating from "@mui/material/Rating";
 import { styled } from "@mui/material/styles";
 
 const Review = ({ review }) => {
   const theme = useContext(ThemeContext);
+  const [likes, setLikes] = useState(review.likes);
+  const [likeIconFilled, setLikeiconFilled] = useState(false);
+  const [dislikes, setDislikes] = useState(review.dislikes);
+  const [dislikeIconFilled, setDislikeiconFilled] = useState(false);
+
+  const handleLike = () => {
+    setLikes(review.likes + 1);
+    setLikeiconFilled(true);
+    setDislikes(review.dislikes);
+    setDislikeiconFilled(false);
+  };
+
+  const handleDislike = () => {
+    setLikes(review.likes);
+    setDislikes(review.dislikes + 1);
+    setDislikeiconFilled(true);
+    setLikeiconFilled(false);
+  };
 
   const StyledRating = styled(Rating)({
     "& .MuiRating-iconFilled": {
@@ -22,6 +42,7 @@ const Review = ({ review }) => {
   const likesStyle = {
     color: theme ? "#fff" : "rgba(0,0,0,.9)",
     marginRight: "0.5rem",
+    cursor: "pointer",
   };
 
   return (
@@ -39,10 +60,30 @@ const Review = ({ review }) => {
         {review.comments}
       </Typography>
       <Box sx={{ display: "flex", mt: "0.5rem" }}>
-        <ThumbUpOffAltOutlinedIcon style={likesStyle} />
-        <Typography style={likesStyle}>{review.likes}</Typography>
-        <ThumbDownOutlinedIcon style={likesStyle} />
-        <Typography style={likesStyle}>{review.dislikes}</Typography>
+        {likeIconFilled ? (
+          <ThumbUpAltRoundedIcon
+            style={likesStyle}
+            onClick={() => handleLike()}
+          />
+        ) : (
+          <ThumbUpOffAltOutlinedIcon
+            style={likesStyle}
+            onClick={() => handleLike()}
+          />
+        )}
+        <Typography style={likesStyle}>{likes}</Typography>
+        {dislikeIconFilled ? (
+          <ThumbDownAltRoundedIcon
+            style={likesStyle}
+            onClick={() => handleDislike()}
+          />
+        ) : (
+          <ThumbDownOutlinedIcon
+            style={likesStyle}
+            onClick={() => handleDislike()}
+          />
+        )}
+        <Typography style={likesStyle}>{dislikes}</Typography>
       </Box>
     </Box>
   );
