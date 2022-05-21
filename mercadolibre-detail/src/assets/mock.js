@@ -549,8 +549,10 @@ const product = {
   date_created: "2018-08-04T02:27:28.000Z",
   last_updated: "2021-05-04T14:10:53.000Z",
   health: 0.88,
+  publicationNumber: "904901256",
   catalog_listing: false,
   channels: ["marketplace"],
+  seachSections: ["Juegos y Juguetes", "Peluches", "Stich"],
   relatedSearch: ["peluche", "stich", "disney"],
 };
 

@@ -1,20 +1,22 @@
-import React from "react";
-import Home from "../pages/Home";
+import React, { useState, createContext } from "react";
 import ProductDetail from "../pages/ProductDetail";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import DownNavbar from "../components/DownNavbar";
+import Navbar from "../components/Navbar/Navbar";
+import DownNavbar from "../components/Navbar/DownNavbar";
+export const ThemeContext = createContext();
 
 const AppRouter = () => {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <BrowserRouter>
-      <Navbar />
-      <DownNavbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="productDetail" element={<ProductDetail />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeContext.Provider value={darkMode}>
+      <BrowserRouter>
+        <Navbar />
+        <DownNavbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Routes>
+          <Route path="/" element={<ProductDetail />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeContext.Provider>
   );
 };
 
