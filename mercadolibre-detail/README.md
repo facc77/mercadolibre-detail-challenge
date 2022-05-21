@@ -19,7 +19,7 @@ Debemos realizar una copia de la siguiente página de detalle de producto : [pá
 
 ## :heavy_check_mark:	 Funcionalidades
 
-- Carousel que cambia de imágen al clickear (no en hover). :white_check_mark: Lo hice con hover por preferir imitar la página modelo
+- Carousel que cambia de imágen al clickear (no en hover). :white_check_mark: Lo hice con hover por preferir imitar la página modelo :heavy_exclamation_mark:	
 - Area de detalle del producto (condición, cantidad vendida, título, precio). :white_check_mark:	
 - Botones de Comprar ahora y Agregar al carrito. :white_check_mark:	
 - Sección de preguntas y respuestas. :white_check_mark:	
