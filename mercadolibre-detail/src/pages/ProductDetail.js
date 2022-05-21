@@ -156,8 +156,8 @@ const ProductDetail = () => {
             justifyContent: "flex-end",
             width: "95%",
             position: "relative",
-            bottom: { sx: 0, md: "13rem" },
-            marginY: "1.5rem",
+            bottom: { sx: 0, md: "16rem" },
+            /* marginY: "1.5rem", */
           }}
         >
           <Typography
