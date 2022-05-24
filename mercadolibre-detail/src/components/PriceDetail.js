@@ -255,7 +255,7 @@ const PriceDetail = () => {
             <KeyboardArrowDownOutlinedIcon
               sx={{
                 position: "relative",
-                top: "15px",
+                top: "25px",
                 left: "3px",
                 width: "18px",
                 height: "18px",
