@@ -3,19 +3,11 @@ import AppBar from "@mui/material/AppBar";
 import CartIcon from "../../assets/img/cartIcon.png";
 import LocationIcon from "../../assets/img/locationLogo.png";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 
 const pages = [
   "Categorias",
@@ -29,25 +21,6 @@ const pages = [
 const userSettings = ["Creá tu cuenta", "Ingresá", "Mis compras"];
 
 const ResponsiveAppBar = ({ darkMode, setDarkMode }) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   const handleTheme = () => setDarkMode((prevState) => !prevState);
 
   console.log(darkMode);
@@ -82,45 +55,6 @@ const ResponsiveAppBar = ({ darkMode, setDarkMode }) => {
               </Typography>
             </Box>
           </Box>
-
-          {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-             <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> 
-          </Box> */}
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-
           <Box
             sx={{
               flexGrow: 1,
@@ -136,7 +70,6 @@ const ResponsiveAppBar = ({ darkMode, setDarkMode }) => {
               <Box
                 component="button"
                 key={page}
-                onClick={handleCloseNavMenu}
                 sx={{
                   color: "rgba(51,51,51,.6)",
                   display: "block",
@@ -144,6 +77,7 @@ const ResponsiveAppBar = ({ darkMode, setDarkMode }) => {
                   backgroundColor: "transparent",
                   border: "0px",
                   paddingX: "0.5rem",
+                  cursor: "pointer",
                 }}
               >
                 {page}
@@ -169,7 +103,6 @@ const ResponsiveAppBar = ({ darkMode, setDarkMode }) => {
               <Box
                 component="button"
                 key={page}
-                onClick={handleCloseNavMenu}
                 sx={{
                   color: "#333",
                   display: "block",
@@ -177,6 +110,7 @@ const ResponsiveAppBar = ({ darkMode, setDarkMode }) => {
                   backgroundColor: "transparent",
                   border: "0px",
                   paddingX: "0.5rem",
+                  cursor: "pointer",
                 }}
               >
                 {page}
