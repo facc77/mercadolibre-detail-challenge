@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# :star: Mercado Libre challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Me propuse realizar el challenge propuesto por Gonzalo Pozzo para practicar mis habilidades en front-end!!
 
-## Available Scripts
+Podés encontrar el challenge en el siguiente link: https://github.com/goncy/mercadolibre-details-challenge
 
-In the project directory, you can run:
+Acá también dejo el link para ver el live que subí a Netlify https://meli-challenge-ferrerfacu.netlify.app/
 
-### `npm start`
+## :fire: Desafío
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Debemos realizar una copia de la siguiente página de detalle de producto : [página modelo](https://articulo.mercadolibre.com.ar/MLA-904901256-peluche-stitch-1-metro-sentado-lilo-disney-importado-_JM)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :hammer: Tecnologías utilizadas
+ - HTML
+ - Javascript
+ - Material-ui como librería de estilos
+ - React como librería de Javascript
+ 
 
-### `npm test`
+## :heavy_check_mark:	 Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Carousel que cambia de imágen al clickear (no en hover). :white_check_mark: Lo hice con hover por preferir imitar la página modelo :heavy_exclamation_mark:	
+- Area de detalle del producto (condición, cantidad vendida, título, precio). :white_check_mark:	
+- Botones de Comprar ahora y Agregar al carrito. :white_check_mark:	
+- Sección de preguntas y respuestas. :white_check_mark:	
 
-### `npm run build`
+## :checkered_flag:	Puntos extra
+- Poder agregar comentarios (no deben guardarse en ningun lado) :white_check_mark:	
+- Poder puntuar opiniones :white_check_mark:	
+- Poder ver opiniones por tipo :white_check_mark:	
+- Modo oscuro :white_check_mark:	
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Notas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Si bien cumplí los puntos requeridos en el challenge todavía debo terminar de pulir el modo responsive que me quedó pendiente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
