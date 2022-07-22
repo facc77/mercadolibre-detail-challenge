@@ -1,0 +1,53 @@
+{
+  "extends": ["plugin:react/recommended", "airbnb" /* , "prettier/react" */],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "object-curly-newline": "off", //para no pedir nueva linea en los brakets de un obj
+    //consultar por regla no-cycle
+    "import/no-cycle": "off",
+    "allowForLoopAfterthoughts": 0, //permite uso de operador ++ --
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], //permite uso de jsx en js file
+    "jsx-quotes": ["error", "prefer-single"],
+    "linebreak-style": 0,
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "arrow-body-style": "off",
+    "indent": "warn",
+    "consistent-return": "off",
+    "no-else-return": "off",
+    "global-require": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "new-cap": "off",
+    "arrow-parens": "off",
+    "prefer-destructuring": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": [0, { "ignore": ["children"] }],
+    "import/no-extraneous-dependencies": [
+      "warn",
+      { "devDependencies": ["**/*.stories.js", "**/*.spec.js"] }
+    ],
+    "import/prefer-default-export": "off"
+  },
+  "ignorePatterns": ["dist/", "node_modules/", "storybook-static/"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
+}
